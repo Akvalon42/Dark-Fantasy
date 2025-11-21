@@ -1,0 +1,10 @@
+{
+  "enemies": [
+    {
+      "name":"Orc",
+      "start_pos": [16, 25],
+      "final_pos": [32,25]
+    }
+  ]
+
+}

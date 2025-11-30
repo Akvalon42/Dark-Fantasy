@@ -29,8 +29,11 @@ class Enemy(pg.sprite.Sprite):
         self.timer = pg.time.get_ticks()
         self.interval = 200
 
-
-
+    # def load_sounds(self):
+    #     self.sound_death = pg.mixer.Sound("sounds/classic-hurt.wav")
+    #     self.sound_death.set_volume(0.2)
+    # def __delete__(self, instance):
+    #     self.sound_death.play()
     def load_animations(self, spritesheet, num_images):
         tile_size_w = 64
         tile_size_h = 32

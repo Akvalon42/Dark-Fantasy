@@ -12,8 +12,8 @@
             "scale": 0.607666015625,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 1024.4114102049016,
-                "y": 510.97147448774604
+                "x": 1023.5885897950984,
+                "y": 510.148654077943
             }
         },
         "LVL_2.tmx": {
@@ -35,6 +35,14 @@
         "MonedaR.tsx": {
             "dynamicWrapping": true,
             "scaleInDock": 1
+        },
+        "Purple Portal Sprite Sheet.png.tsx": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Purple Portal.tsx": {
+            "dynamicWrapping": true
         },
         "lvl_1.tsx": {
             "dynamicWrapping": true,
@@ -63,6 +71,7 @@
     ],
     "project": "Dark_F.tiled-project",
     "recentFiles": [
+        "Purple Portal Sprite Sheet.png.tsx",
         "LVL_1.tmx",
         "болото.tsx",
         "LVL_2.tmx",

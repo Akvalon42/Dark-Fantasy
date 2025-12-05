@@ -15,7 +15,7 @@ class Game:
     def __init__(self):
         self.screen = pg.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
         pg.display.set_caption("игра")
-
+        self.level = 2
         self.setup()
 
     # noinspection PyAttributeOutsideInit
@@ -23,7 +23,7 @@ class Game:
         self.mode = "game"
         self.clock = pg.time.Clock()
         self.is_running = False
-        self.level = 2
+
         self.background_1 = pg.image.load("./maps/free-swamp-game-tileset-pixel-art (1)/2 Background/Layers/2.png")
         self.background_1 = pg.transform.scale(self.background_1, (SCREEN_WIDTH, SCREEN_HEIGHT))
         self.background_2 = pg.image.load("./maps/free-swamp-game-tileset-pixel-art (1)/2 Background/Layers/5.png")
@@ -40,8 +40,10 @@ class Game:
         self.coins = pg.sprite.Group()
         self.enemies = pg.sprite.Group()
         self.arrows = pg.sprite.Group()
+        self.portal = []
+        self.portals = pg.sprite.Group()
 
-        self.tmx_map = load_layer(self.all_sprites, self.platforms, self.coins, self.level)
+        self.tmx_map = load_layer(self.all_sprites, self.platforms, self.coins, self.level, self.portal)
         self.map_pixel_width = self.tmx_map.width * self.tmx_map.tilewidth * TILE_SCALE
         self.map_pixel_height = self.tmx_map.height * self.tmx_map.tileheight * TILE_SCALE
         self.player = Player(self.map_pixel_width, self.map_pixel_height, self.arrows, self.all_sprites)
@@ -99,12 +101,24 @@ class Game:
         self.player.update(self.platforms)
         self.coins.update()
         self.arrows.update()
+
+        self.portals.update()
+
         for coin in self.coins:
             if coin.rect.colliderect(self.player.hitbox):
                 self.collected_coins += 1
                 coin.kill()
+                if  not self.coins:
+                    self.all_sprites.add(self.portal[0])
+                    self.portals.add(self.portal[0])
         hit = pg.sprite.groupcollide(self.arrows, self.enemies, True, True)
         pg.sprite.groupcollide(self.arrows, self.platforms, True, False)
+        if self.portal[0].rect.colliderect(self.player.hitbox) and not self.coins:
+            self.level += 1
+            if self.level == 4:#менять значение на единицу выше при каждом новом уровне
+                quit()
+            self.setup()
+
         for enemy in self.enemies.sprites():
             enemy.update(self.platforms)
         if hit:

@@ -1,0 +1,20 @@
+{
+  "enemies": [
+    {
+      "name":"Orc",
+      "start_pos": [9, 3],
+      "final_pos": [14,3]
+    },
+    {
+      "name":"Orc",
+      "start_pos": [47, 22],
+      "final_pos": [53,22]
+    },
+    {
+      "name":"Orc",
+      "start_pos": [10, 10],
+      "final_pos": [25,10]
+    }
+  ]
+
+}

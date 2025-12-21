@@ -12,16 +12,16 @@
             "scale": 0.607666015625,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 1024.4114102049016,
-                "y": 510.97147448774604
+                "x": 1023.5885897950984,
+                "y": 510.148654077943
             }
         },
         "LVL_2.tmx": {
-            "scale": 1,
+            "scale": 1.5,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 507,
-                "y": 288
+                "x": 474,
+                "y": 313.33333333333326
             }
         },
         "LVL_2tmx.tmx": {
@@ -30,6 +30,14 @@
             "viewCenter": {
                 "x": 479.8071514664524,
                 "y": 239.90357573322623
+            }
+        },
+        "LVL_3.tmx": {
+            "scale": 1,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 487,
+                "y": 263
             }
         },
         "MonedaR.tsx": {
@@ -68,12 +76,14 @@
     "openFiles": [
         "LVL_1.tmx",
         "болото.tsx",
-        "LVL_2.tmx"
+        "LVL_2.tmx",
+        "LVL_3.tmx"
     ],
     "project": "Dark_F.tiled-project",
     "recentFiles": [
         "LVL_1.tmx",
         "болото.tsx",
+        "LVL_3.tmx",
         "LVL_2.tmx",
         "Purple Portal Sprite Sheet.png.tsx",
         "LVL_2tmx.tmx",

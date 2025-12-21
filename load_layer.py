@@ -1,5 +1,5 @@
 import pytmx
-from platform import Platform
+from assets_platforms import Platform
 from coin import Coin
 from portal import Portal
 def load_layer(all_sprites, platforms, coins, level, portal ):

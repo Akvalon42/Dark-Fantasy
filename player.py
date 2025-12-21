@@ -36,7 +36,7 @@ class Player(pg.sprite.Sprite):
         self.hitbox = pg.Rect(self.rect.x, self.rect.y, 16 * TILE_SCALE, 16 * TILE_SCALE * 1.5 + 8 )
 
     def load_sounds(self):
-        self.sound_steps = pg.mixer.Sound("sounds/footstep on concrete 4.wav")
+        self.sound_steps = pg.mixer.Sound("sounds/Valley of Dreams.wav")
         self.sound_steps.set_volume(0.02)
         self.sound_bow = pg.mixer.Sound("sounds/a-shot-arrow-from-a-bow.wav")
         self.sound_bow.set_volume(0.2)
@@ -78,7 +78,7 @@ class Player(pg.sprite.Sprite):
             self.jump()
         if keys[pg.K_a]:
             # if self.current_image == 1:
-            #     self.sound_steps.play()
+            self.sound_steps.play()
             if self.current_animation != self.move_animations_left:
                 self.current_animation = self.move_animations_left
                 self.current_image = 0
@@ -86,7 +86,7 @@ class Player(pg.sprite.Sprite):
             self.velocity_x = -5
         elif keys[pg.K_d]:
             # if self.current_image == 1:
-            #     self.sound_steps.play()
+            self.sound_steps.play()
             if self.current_animation != self.move_animations_right:
                 self.current_animation = self.move_animations_right
                 self.current_image = 0
@@ -109,11 +109,13 @@ class Player(pg.sprite.Sprite):
         mouse_keys = pg.mouse.get_pressed()
         if mouse_keys[0]:
             if pg.time.get_ticks() - self.arrow_timer > self.arrow_interval and self.current_image >= 11:
+                self.sound_steps.stop()
                 self.sound_bow.play()
                 arrow = Arrow(self.hitbox, self.direction)
                 self.arrows.add(arrow)
                 self.all_sprites.add(arrow)
                 self.arrow_timer = pg.time.get_ticks()
+
 
             if self.direction == "right":
                 self.current_animation = self.attack_animations_right

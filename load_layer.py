@@ -3,6 +3,7 @@ from assets_platforms import Platform
 from coin import Coin
 from portal import Portal
 def load_layer(all_sprites, platforms, coins, level, portal ):
+    print(level)
     tmx_map = pytmx.load_pygame(f"maps/LVL_{level}.tmx")
     for layer in tmx_map:
         if layer.name == "карта":

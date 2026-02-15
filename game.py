@@ -117,7 +117,8 @@ class Game:
             self.level += 1
             if self.level == MAX_LEVEL:
                 self.is_running = False
-            self.setup()
+            else:
+                self.setup()
 
         for enemy in self.enemies.sprites():
             enemy.update(self.platforms)

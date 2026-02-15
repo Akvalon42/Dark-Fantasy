@@ -27,7 +27,7 @@ class Menu:
             ("хардкор", 3)],
                                onchange=self.set_quality)
         self.menu.add.button("НАЧАТЬ ИГРУ", self.start_game)
-        self.menu.add.button("ВЫЙТИ В МЕНЮ", self.quit_game)
+        self.menu.add.button("ВЫЙТИ В МЕНЮ", pygame_menu.events.EXIT)
 
 
 

@@ -1,0 +1,47 @@
+{
+"easy": {"enemies": [
+    {
+      "name":"Orc",
+      "start_pos": [16, 25],
+      "final_pos": [32,25]
+    }
+
+  ]},
+"middle": {"enemies": [
+    {
+      "name":"Orc",
+      "start_pos": [16, 25],
+      "final_pos": [32,25]
+    },
+    {
+      "name":"Orc",
+      "start_pos": [4, 13],
+      "final_pos": [10,13]
+    },
+    {
+      "name":"Orc",
+      "start_pos": [22, 11],
+      "final_pos": [29,11]
+    }
+  ]},
+"hard": {"enemies": [
+    {
+      "name":"Orc",
+      "start_pos": [16, 25],
+      "final_pos": [32,25]
+    },
+    {
+      "name":"Orc",
+      "start_pos": [4, 13],
+      "final_pos": [10,13]
+    },
+    {
+      "name":"Orc",
+      "start_pos": [22, 11],
+      "final_pos": [29,11]
+    }
+  ]}
+
+
+
+}
